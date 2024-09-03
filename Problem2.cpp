@@ -4,12 +4,18 @@
 using namespace std;
 
 
-int main(){
-    int a, b, c;
-    
-    cout << "Input a, b, and c: ";
-    cin >> a >> b >> c;
+int a, b, c;
 
+void calculate();
+
+
+int main(){
+    cin >> a >> b >> c;
+    calculate();
+}
+
+
+void calculate(){
     int disc = b * b - 4 * a * c;
 
     if(disc > 0){

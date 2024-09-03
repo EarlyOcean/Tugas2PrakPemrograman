@@ -4,7 +4,7 @@
 using namespace std;
 #define ll long long
 
-const float TAX_PERCENTAGE = 0.2;
+const double TAX_PERCENTAGE = 0.2;
 
 string name = "John Doe";
 ll gross_salary = 15000000; 
@@ -15,7 +15,26 @@ void calculate();
 
 
 int main(){
+    name = "John Doe";
+    gross_salary = 15000000;
+    installment = 200000;
+    insurance = 150000;
     calculate();
+    cout << endl;
+
+    name = "Bjarne Stoustrope";
+    gross_salary = 1000000000000000;
+    installment = 500000;
+    insurance = 2000000;
+    calculate();
+    cout << endl;
+
+    name = "Alexander The Great";
+    gross_salary = 6000000;
+    installment = 300000;
+    insurance = 100000;
+    calculate();
+    cout << endl;
 }
 
 
