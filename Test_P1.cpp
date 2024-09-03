@@ -12,6 +12,7 @@ ll installment = 200000;
 ll insurance = 150000;
 
 void calculate();
+string to_currency_format(ll num);
 
 
 int main(){
@@ -38,6 +39,21 @@ int main(){
 }
 
 
+void calculate(){
+    ll tax = gross_salary * TAX_PERCENTAGE;
+    ll net_salary = gross_salary - tax - installment - insurance;
+
+    cout << "Payslip for Employee" << endl;
+    cout << "---------------------" << endl;
+    cout << "Name: " << name << endl;
+    cout << "Gross Salary: " << to_currency_format(gross_salary) << endl;
+    cout << "Tax (20%): " << to_currency_format(tax) << endl;
+    cout << "Installment: " << to_currency_format(installment) << endl;
+    cout << "Insurance: " << to_currency_format(insurance) << endl;
+    cout << "Net Salary: " << to_currency_format(net_salary) << endl;
+}
+
+
 string to_currency_format(ll num){
     string s = to_string(num);
     string res = "";
@@ -52,19 +68,4 @@ string to_currency_format(ll num){
     res = "Rp" + res + ",00";
 
     return res;
-}
-
-
-void calculate(){
-    ll tax = gross_salary * TAX_PERCENTAGE;
-    ll net_salary = gross_salary - tax - installment - insurance;
-
-    cout << "Payslip for Employee" << endl;
-    cout << "---------------------" << endl;
-    cout << "Name: " << name << endl;
-    cout << "Gross Salary: " << to_currency_format(gross_salary) << endl;
-    cout << "Tax (20%): " << to_currency_format(tax) << endl;
-    cout << "Installment: " << to_currency_format(installment) << endl;
-    cout << "Insurance: " << to_currency_format(insurance) << endl;
-    cout << "Net Salary: " << to_currency_format(net_salary) << endl;
 }

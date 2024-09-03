@@ -6,6 +6,7 @@ using namespace std;
 
 int a, b, c;
 
+// menggunakan fungsi agar test code lebih mudah
 void calculate();
 
 
