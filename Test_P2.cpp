@@ -4,7 +4,7 @@
 using namespace std;
 
 
-int a, b, c;
+double a, b, c;
 
 void calculate();
 
@@ -16,9 +16,9 @@ int main(){
     cout << "Output: "; calculate();
     cout << endl;
 
-    a = 1; b = 2; c = 1;
+    a = 1; b = -1; c = 0.25;
     cout << "Test case with the discriminant equals to zero (1 root)" << endl;
-    cout << "Input: 1 2 1" << endl;
+    cout << "Input: 1 -1 0.25" << endl;
     cout << "Output: "; calculate();
     cout << endl;
 
@@ -31,17 +31,17 @@ int main(){
 
 
 void calculate(){
-    int disc = b * b - 4 * a * c;
+    double disc = b * b - 4 * a * c;
 
     if(disc > 0){
-        int x1 = (-b + sqrt(disc)) / (2 * a);
-        int x2 = (-b - sqrt(disc)) / (2 * a);
+        double x1 = (-b + sqrt(disc)) / (2 * a);
+        double x2 = (-b - sqrt(disc)) / (2 * a);
 
-        cout << "The roots are " + to_string(x1) + " and " + to_string(x2) << endl;
+        cout << "The factors are " << x1 << " and " << x2 << endl;
     }
     else if(disc == 0){
-        int x = -b / (2 * a);
-        cout << "The root is " + to_string(x) << endl;
+        double x = -b / (2 * a);
+        cout << "The factor is " << x << endl;
     }
     else if(disc < 0){
         cout << "There are no real roots" << endl;
